@@ -44,6 +44,7 @@ const RegisterModal = () => {
 
         axios.post('/api/register', data).then(() => {
             registerModal.onClose();
+            loginModal.onOpen();
         }).catch((err) => {
             toast.error('Error while creating an account');
         }).finally(()=>{
